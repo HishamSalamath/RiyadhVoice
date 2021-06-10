@@ -1,0 +1,21 @@
+﻿
+@model EventsListViewModel
+
+
+    <h1>@Model.CurrentCategory</h1>
+    @foreach (var events in Model.Events)
+        {
+         <div class="col-sm-4 col-lg-    4 col-md-4">
+            <div class="thumbnail">
+                <img src="@events.ImageThumbnailURL" alt="">
+         <div class="caption">
+            <h3>
+                <a asp-controller="Events" asp-action="Details" asp-route-id="@events.Eventid" >@events.Name</a>
+            </h3>
+            <p>@events.ShortDescription</p>
+        </div>
+    </div>
+</div>
+        }
+
+
