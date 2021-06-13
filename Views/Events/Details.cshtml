@@ -14,7 +14,15 @@
         <h3>
             <a href="#">@Model.Name</a>
         </h3>
-        <h4>@Model.ShortDescription</h4>
-        <p>@Model.LongDescription</p>
+        <h4 style="color:black">@Model.ShortDescription</h4>
+        <p style="color: black">@Model.LongDescription</p>
+    </div>
+    <div class="addToCart">
+        <p class="button">
+            <a class="btn btn-primary"
+               asp-controller="EventCart"
+               asp-action="AddToCart"
+               asp-route-EventID="@Model.Eventid">Avail this service</a>
+        </p>
     </div>
 </div>

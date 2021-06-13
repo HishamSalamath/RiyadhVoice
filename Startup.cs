@@ -33,6 +33,9 @@ namespace RiyadhVoice
             services.AddControllersWithViews();   //services.AddMvc(); would also work still
             services.AddScoped<IEventsRepository, EventsRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<AvailedEvents>(sp => AvailedEvents.GetCart(sp));
+            services.AddHttpContextAccessor();
+            services.AddSession();
 
         }
 
@@ -54,7 +57,7 @@ namespace RiyadhVoice
 
             app.UseHttpsRedirection();
             app.UseStaticFiles(); // used to read css,transcript files in directory
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

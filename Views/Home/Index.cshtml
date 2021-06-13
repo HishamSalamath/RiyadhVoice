@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model homeViewModel
+    <partial name="_Carousel" />
+
+
+    <div class="welcomeText">
+        <h1>"Welcome to our music world!"</h1>
+        <h2>"About us"</h2>
+        <p>
+            "We serve the best musical service for any events across the kingdom. Our establishment mainly focuses to provide the
+            Kingdom a hand in developmnt process of 'VISION 2030' by providing musical support in various events glorifying the moments in a great way! "
+        </p>
+
+    </div>
+
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+    <div><br /></div>
+
+
+
+    <div>
+        <h2 class="myxx">Event of the week</h2>
+        <h4 class="caption1">Our weekly achievment - just for you!</h4>
+
+
+        <div class="row">
+
+            @foreach (var events in Model.Eventsoftheweek)
+            {
+                <partial name="_EventCard" model="events" />
+            }
+
+        </div>
+    </div>
+
+
+
+

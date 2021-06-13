@@ -1,18 +1,72 @@
 ﻿body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-image: url('/images/Pattern1.jpg');
-/*    <a href='https://www.freepik.com/vectors/background'>Background vector created by s.salvador - www.freepik.com*/
-      background-repeat: no-repeat;
-/**/  font-family: 'Source Sans Pro', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/images/pattern2.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode :darken;
+    background-size :cover;
+    position:relative;
+    background-position: center center;
+    background-attachment:fixed;
+
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
+
+
+.myxx {
+    color:burlywood;
+    text-decoration-style:dashed;
+}
+
+.welcomeText {
+    position:absolute;
+
+}
+
+    .welcomeText h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: xx-large;
+        font-family: 'Freestyle Script';
+        font-display: block;
+        text-align: center;
+    }
+
+    .welcomeText h2 {
+        color : #fff;
+        text-transform : uppercase;
+        font-family:'Times New Roman', Times, serif;
+        font-size:x-large;
+        font-style:oblique;
+    }
+
+    .welcomeText p {
+        color: #fff;
+        text-transform : none;
+        font-family:'Times New Roman', Times, serif;
+        font-size:medium;
+
+    }
+
+.para{
+    backface-visibility:visible;
+    display:inline-block;
+}
+
+.caption1 {
+    color:aliceblue;
+    text-decoration-style:dotted;
+}
 
 .slide-image {
     width: 100%;
 }
 
+
+
 .carousel-holder {
     margin-bottom: 30px;
+    
 }
 
 .carousel-control,
@@ -27,6 +81,7 @@
 
     .caption h4 {
         white-space: nowrap;
+        color:antiquewhite;
     }
 
 .thumbnail img {
@@ -44,7 +99,7 @@
 
     .thumbnail .caption-full {
         padding: 9px;
-        color: #333;
+        color:antiquewhite;
     }
 
 footer {
@@ -56,8 +111,8 @@ footer {
 }
 
 .navbar-inverse {
-    background-color: #660066;
-    border-color: #660066 ;
+    background-color: #a593c2;
+    border-color: #a593c2;
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -91,3 +146,4 @@ footer {
     background-color: #fcaeae !important;
     border-color: #fba1a1 !important;
 }
+
