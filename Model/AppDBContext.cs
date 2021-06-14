@@ -20,6 +20,8 @@ namespace RiyadhVoice.Model
 
         public DbSet<AvailedEventItems> AvailedEvents { get; set; }
 
+        public DbSet<ArtistManagement> Artists { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -98,6 +100,54 @@ namespace RiyadhVoice.Model
 
 
             });
+            modelBuilder.Entity<ArtistManagement>().HasData(new ArtistManagement
+            {
+                ArtistID = 1,
+                A_Name = "Band",
+                A_ShortDescription = "This field will be added later",
+                A_LongDescription = "We have bunch of talented musicians outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                A_ImageURL = "https://i.imgur.com/s9MZzSn.jpeg",
+                A_ImageThumbnailURL = "https://i.imgur.com/s9MZzSnm.jpg",
+                A_CategoryID = 2,
+            });
+
+            modelBuilder.Entity<ArtistManagement>().HasData(new ArtistManagement
+            {
+                ArtistID = 2,
+                A_Name = "DJ",
+                A_ShortDescription = "This field will be added later",
+                A_LongDescription = "We have bunch of talented DJ's outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                A_ImageURL = "https://i.imgur.com/8GqMC5R.jpeg",
+                A_ImageThumbnailURL = "https://i.imgur.com/8GqMC5Rm.jpg",
+                A_CategoryID = 2,
+            });
+
+            modelBuilder.Entity<ArtistManagement>().HasData(new ArtistManagement
+            {
+                ArtistID = 3,
+                A_Name = "Solo Singer",
+                A_ShortDescription = "This field will be added later",
+                A_LongDescription = "We have bunch of talented solo singers outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                A_ImageURL = "https://i.imgur.com/vVSMrHL.jpeg",
+                A_ImageThumbnailURL = "https://i.imgur.com/vVSMrHLm.jpg",
+                A_CategoryID = 2,
+            });
+
+            modelBuilder.Entity<ArtistManagement>().HasData(new ArtistManagement
+            {
+                ArtistID = 4,
+                A_Name = "duo",
+                A_ShortDescription = "This field will be added later",
+                A_LongDescription = "We have bunch of talented solo singers outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                A_ImageURL = "https://i.imgur.com/mUHmMqa.jpeg",
+                A_ImageThumbnailURL = "https://i.imgur.com/mUHmMqam.jpg",
+                A_CategoryID = 2,
+            });
+
+
+
+
+
         }
 
 

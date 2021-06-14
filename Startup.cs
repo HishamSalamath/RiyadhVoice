@@ -33,6 +33,7 @@ namespace RiyadhVoice
             services.AddControllersWithViews();   //services.AddMvc(); would also work still
             services.AddScoped<IEventsRepository, EventsRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IArtistRepository, ArtistRepository>();
             services.AddScoped<AvailedEvents>(sp => AvailedEvents.GetCart(sp));
             services.AddHttpContextAccessor();
             services.AddSession();

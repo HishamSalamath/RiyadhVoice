@@ -5,49 +5,81 @@
 }
 
 @model homeViewModel
-    <partial name="_Carousel" />
+
+<div class="welcomeText">
+    <h1>Let's enlight the glory of your events with music,</h1>
+    <h2>the language of spirit!</h2>
+</div>
+
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+
+<partial name="_Carousel" />
 
 
-    <div class="welcomeText">
-        <h1>"Welcome to our music world!"</h1>
-        <h2>"About us"</h2>
-        <p>
-            "We serve the best musical service for any events across the kingdom. Our establishment mainly focuses to provide the
-            Kingdom a hand in developmnt process of 'VISION 2030' by providing musical support in various events glorifying the moments in a great way! "
-        </p>
+<div class="welcomeText">
+    <h3>"Why choose us!"</h3>
+    <p>
+        It’s our attention to the small stuff, scheduling of timelines and keen event management that makes us stand out from the rest. We are creative,
+        while keeping a close eye on the calendar and your budget.
+    </p>
+    <p> Morever, We deeply understand and go with the famous saying - </p>
+    <h4>
+        <br />
+        <br />
+        Music is the moonlight in the gloomy night of life.
+    </h4>
+    <h5 style="font-family:'Bookman Old Style';font-size:large;font-style:italic;position:relative;left:400px;">
+        -John Paul Friedrich Richter
+    </h5>
 
-    </div>
+</div>
 
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
-    <div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
 
 
 
-    <div>
-        <h2 class="myxx">Event of the week</h2>
-        <h4 class="caption1">Our weekly achievment - just for you!</h4>
+<div class="ArtistSlide">
+    <h2 class="myxx">Artist and Event of the week</h2>
+    <h4 class="caption1">Our Monthly achievment - just for you!</h4>
+</div>
+    <div><br /></div>
+    <div><br /></div>
+
+    <partial name="_Carousel2" />
 
 
-        <div class="row">
+    @*<div class="row">
 
             @foreach (var events in Model.Eventsoftheweek)
             {
                 <partial name="_EventCard" model="events" />
             }
 
-        </div>
-    </div>
+        </div>*@
 
 
 

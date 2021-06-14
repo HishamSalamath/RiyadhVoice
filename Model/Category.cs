@@ -13,5 +13,7 @@ namespace RiyadhVoice.Model
         public string CategoryName { get; set; }
         public string Description { get; set; }
         public List<Events> Events { get; set; }  
+
+        public List<ArtistManagement> Artists { get; set; }
     }
 }

@@ -1,15 +1,16 @@
 ﻿body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/images/pattern2.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../Images/BG_Artists.png');
     background-repeat: no-repeat;
-    background-blend-mode :darken;
-    background-size :cover;
-    position:relative;
-    background-position: center center;
-    background-attachment:fixed;
-
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position:50% 30%;
+    position: relative;
+    background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+
 
 
 
@@ -24,20 +25,45 @@
 }
 
     .welcomeText h1 {
-        color: #fff;
+        color: white;
         text-transform: uppercase;
         font-size: xx-large;
-        font-family: 'Freestyle Script';
         font-display: block;
+        font-family: 'Freestyle Script';
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
         text-align: center;
+        position: relative;
+        left: 280px;
     }
 
     .welcomeText h2 {
-        color : #fff;
-        text-transform : uppercase;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Freestyle Script';
+        font-size: xx-large;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        text-align: center;
+        font-display: block;
+        position: relative;
+        left: 250px;
+    }
+
+    .welcomeText h3 {
+        color: white;
+        text-transform: uppercase;
         font-family:'Times New Roman', Times, serif;
-        font-size:x-large;
-        font-style:oblique;
+        font-size:large;
+    }
+
+    .welcomeText h4 {
+        color: white;
+        text-transform: uppercase;
+        font-family:'Bookman Old Style';
+        font-size:large;
+        font-display:block;
+        font-style:italic;
+        position: relative;
+        left: 100px;
     }
 
     .welcomeText p {
@@ -59,19 +85,28 @@
 }
 
 .slide-image {
-    width: 100%;
+    text-align: center;
+    margin: -25px 0 0 -25px;
+    position: center;
+    width: 640px;
+    height: 360px;
+    border: hidden;
 }
 
 
 
 .carousel-holder {
-    margin-bottom: 30px;
-    
+    margin-bottom: auto;
+    width: 640px;
+    height: 360px;
+    border: hidden;
 }
 
 .carousel-control,
 .item {
-    border-radius: 4px;
+    width: 10%;
+    border-radius: 1px;
+    border: hidden;
 }
 
 .caption {
@@ -111,8 +146,8 @@ footer {
 }
 
 .navbar-inverse {
-    background-color: #a593c2;
-    border-color: #a593c2;
+    background-color:aliceblue;
+    border-color:aliceblue
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -121,20 +156,29 @@ footer {
 }
 
 .navbar .nav > li > a {
-    font-size: 1.2em;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    color: white;
+    font-size: 1.3em;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    color: #660066;
+    position: relative;
+    left:400px;
+    top:25px;
+    margin-top:auto;
+    display: inline-block;
+    vertical-align:top;
 }
 
 .carousel .item {
-    height: 400px;
+    text-align: center;
+    position: relative;
+    left: 200px;
+    width: 100%;
+    border:hidden;
 }
 
 .item img {
-    position: absolute;
-    top: 0;
-    left: 0;
     min-height: 400px;
+    
+    
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
@@ -147,3 +191,38 @@ footer {
     border-color: #fba1a1 !important;
 }
 
+.imgg {
+    min-height: 300px;
+    max-height:300px;
+    border-image-width: 4px;
+}
+
+.slide{
+    position: relative;
+    left : 140px;
+    max-height:600px;
+    width:100%;
+    border:hidden;
+
+}
+
+.arrowc {
+    position:relative;
+    left:55px;
+    bottom:180px;
+    width:80%;
+}
+
+.slide1 {
+    position: relative;
+    left: 140px;
+    max-height: 600px;
+    max-width: 650px;
+}
+
+.ArtistSlide {
+    position: relative;
+    left: 280px;
+    max-height: 600px;
+    max-width: 650px;
+}

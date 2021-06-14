@@ -19,6 +19,90 @@ namespace RiyadhVoice.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("RiyadhVoice.Model.ArtistManagement", b =>
+                {
+                    b.Property<int>("ArtistID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("A_CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("A_ImageThumbnailURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("A_IsEventOfTheWeek")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("A_LongDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("A_ShortDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ArtistID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("Artists");
+
+                    b.HasData(
+                        new
+                        {
+                            ArtistID = 1,
+                            A_CategoryID = 2,
+                            A_ImageThumbnailURL = "https://i.imgur.com/s9MZzSnm.jpg",
+                            A_ImageURL = "https://i.imgur.com/s9MZzSn.jpeg",
+                            A_IsEventOfTheWeek = false,
+                            A_LongDescription = "We have bunch of talented musicians outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                            A_Name = "Band",
+                            A_ShortDescription = "This field will be added later"
+                        },
+                        new
+                        {
+                            ArtistID = 2,
+                            A_CategoryID = 2,
+                            A_ImageThumbnailURL = "https://i.imgur.com/8GqMC5Rm.jpg",
+                            A_ImageURL = "https://i.imgur.com/8GqMC5R.jpeg",
+                            A_IsEventOfTheWeek = false,
+                            A_LongDescription = "We have bunch of talented DJ's outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                            A_Name = "DJ",
+                            A_ShortDescription = "This field will be added later"
+                        },
+                        new
+                        {
+                            ArtistID = 3,
+                            A_CategoryID = 2,
+                            A_ImageThumbnailURL = "https://i.imgur.com/vVSMrHLm.jpg",
+                            A_ImageURL = "https://i.imgur.com/vVSMrHL.jpeg",
+                            A_IsEventOfTheWeek = false,
+                            A_LongDescription = "We have bunch of talented solo singers outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                            A_Name = "Solo Singer",
+                            A_ShortDescription = "This field will be added later"
+                        },
+                        new
+                        {
+                            ArtistID = 4,
+                            A_CategoryID = 2,
+                            A_ImageThumbnailURL = "https://i.imgur.com/mUHmMqam.jpg",
+                            A_ImageURL = "https://i.imgur.com/mUHmMqa.jpeg",
+                            A_IsEventOfTheWeek = false,
+                            A_LongDescription = "We have bunch of talented solo singers outcasting mind blowing skills in their field of expertise. let us know the type of music you prefer , we will provide you wih the best",
+                            A_Name = "duo",
+                            A_ShortDescription = "This field will be added later"
+                        });
+                });
+
             modelBuilder.Entity("RiyadhVoice.Model.AvailedEventItems", b =>
                 {
                     b.Property<int>("EventItemID")
@@ -162,6 +246,13 @@ namespace RiyadhVoice.Migrations
                             Name = "Musical festivals",
                             ShortDescription = "Let the fest begin with a bang"
                         });
+                });
+
+            modelBuilder.Entity("RiyadhVoice.Model.ArtistManagement", b =>
+                {
+                    b.HasOne("RiyadhVoice.Model.Category", "Category")
+                        .WithMany("Artists")
+                        .HasForeignKey("CategoryID");
                 });
 
             modelBuilder.Entity("RiyadhVoice.Model.AvailedEventItems", b =>

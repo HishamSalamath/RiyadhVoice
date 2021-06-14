@@ -21,22 +21,45 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Events" asp-action="List">Events</a></li>
-                    </ul>
+
+                    @*<p class="lead">
+        <img class="img-responsive" alt="Riyadh Voice logo" src="~/Images/riyad_logo.png"/>
+        </p>*@
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p class="lead">
+                                <img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/riyadh-logo-retina-min.png" />
+                            </p>
+                        </div>
+                        <ul class="nav navbar-nav">
+
+                            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-controller="Vision" asp-action="Index">Vision</a></li>
+                            <li><a asp-controller="Artists" asp-action="List">Artist Management</a></li>
+                            <li><a asp-controller="Events" asp-action="List">Events</a></li>
+                            <li><a asp-controller="Contact" asp-action="Index">Contact us</a></li>
+
+                        </ul>
+
+
+
+                    </div>
                 </div>
-            </div>
+             </div>
         </nav>
-        <div class="row">
+        @*<div class="row">
             <div class="col-md-3">
                 <p class="lead">
                     <img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/riyadh-logo-retina-min.png" />
                 </p>
-            </div>
+            </div>*@
             <div>
                 <br />
             </div>
@@ -65,7 +88,7 @@
         <div class="col-md-9">
             @RenderBody()
         </div>
-    </div>
+    
        
 
 </body>
